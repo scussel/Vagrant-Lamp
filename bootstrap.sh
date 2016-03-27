@@ -68,3 +68,8 @@ mysql -u root -p$PASSWORD ibrap_site < /var/www/html/projects/Ibrap/_installatio
 mysql -u root -p$PASSWORD indicadores < /var/www/html/projects/Indicadores/_installation/indicadores.sql
 mysql -u root -p$PASSWORD scussel_site < /var/www/html/projects/PanelAdmin/_installation/scussel_site.sql
 mysql -u root -p$PASSWORD angular_tutorial < /var/www/html/projects/AngularJS/_installation/angular_tutorial.sql
+
+# config timezone
+sudo rm /etc/localtime
+sudo ln -s /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+sudo dpkg-reconfigure --frontend noninteractive tzdata
